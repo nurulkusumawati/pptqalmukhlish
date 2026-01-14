@@ -1,0 +1,39 @@
+:root{
+  --primary:#0f9d58; /* hijau utama */
+  --muted:#f3fbf6;
+  --accent:#f8f9fa;
+  --body-font:'Poppins', sans-serif;
+}
+*{box-sizing:border-box}
+body{font-family:var(--body-font);background:var(--muted);color:#123; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+.hero{min-height:60vh;background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1400&q=60');background-size:cover;background-position:center;display:flex;position:relative}
+.hero::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg, rgba(15,157,88,0.45), rgba(15,157,88,0.20))}
+.hero .container{position:relative;z-index:2;padding:6rem 0}
+.hero .display-5{color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.3)}
+section h2{font-weight:700;margin-bottom:1rem;color:var(--primary)}
+.card{border:0;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(10,80,50,.08)}
+footer a{opacity:.9}
+@media (max-width:768px){
+  .hero{min-height:48vh}
+  .hero .display-5{font-size:1.6rem}
+}
+/* Gallery hover */
+#galeri img{transition:transform .3s, box-shadow .3s;border-radius:.5rem}
+#galeri img:hover{transform:scale(1.04);box-shadow:0 14px 40px rgba(0,0,0,.18)}
+
+/* Small aesthetic tweaks */
+.navbar-brand{color:var(--primary)}
+.btn-primary{background:var(--primary);border-color:var(--primary)}
+.btn-outline-primary{border-color:var(--primary);color:var(--primary)}
+.card h5{font-size:1rem}
+
+/* Accessibility focus */
+a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(15,157,88,.18);outline-offset:2px}
+
+/* Reveal-on-scroll */
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease}
+.reveal.reveal-active{opacity:1;transform:none}
+
+/* Sticky helper */
+.sticky-top{top:1rem}
